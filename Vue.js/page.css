@@ -1,0 +1,8 @@
+.test-style-class{
+    width: 200px;
+    margin: 5px;
+    padding: 5px 10px;
+    color:aquamarine;
+    background: #666;
+    text-align: center;
+}

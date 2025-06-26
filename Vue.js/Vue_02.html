@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>資料登入及顯示</title>
+    <link rel="stylesheet" href="page.css">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+</head>
+
+<body>
+    <!-- Vue Render 有效區域 -->
+
+    <div id="app" style="color: black;">
+        <!-- 輸出 - 文字的綁定 -->
+        {{ message}}
+
+        <!----------------------------------------------------->
+
+        <!-- 迴圈 -->
+        <ul>
+            <!-- 使用 v-for 以迴圈的方式 render(呈現) 出來 -->
+            <!-- item 為迴圈每輪所指向的資料項目 -->
+            <li v-for="item in list">{{ item }}</li>
+        </ul>
+
+        <!----------------------------------------------------->
+
+        <!-- 輸入-表單變數資料雙向綁定 -->
+
+        <!-- 輸入資料，並綁定 message -->
+        <input v-model="Ian"><br>
+
+        <!----------------------------------------------------->
+
+        <!-- 事件 -->
+        <!-- v-on 為事件監聽，click 為滑鼠按下事件 -->
+        <button v-on:click="testEvent">按我</button>
+
+        <!----------------------------------------------------->
+
+        <!-- 條件式 -->
+        <!-- 如 isIan 的質為 true 時，將顯示此 div 標籤 -->
+        <div v-if="isIan">{{ messageOne }}</div>
+
+        <!----------------------------------------------------->
+
+        <!-- JavaScript 表示式渲染 -->
+        <!-- 以 『三元表示式』 判斷 messageTwo 是否值相等於 "This is message."，相等時顯示為 "Yes"，反之則顯示 "No" -->
+        取資料模型屬性進行判斷: {{ messageTwo === 'This is message.'?'Yes':'No'}}<br>
+
+        <!-- 以 『文字相加』的方式將 messageTwo 屬性後加上 "(Add Text)" 字串 -->
+        文字相加: {{ messageTwo + '(Add Text)' }}<br>
+
+        <!-- 以 『數字相加』的方式渲染 counter 加 10 的結果 -->
+        數字運算: {{ counter + 10 }}<br>
+
+        <!-- 使用 JavaScript 陣列的 join 語法，以『，』作為間隔符號合併 foods 陣列中的值 -->
+        陣列合併: {{ foods.join(', ') }}<br>
+
+        <!----------------------------------------------------->
+
+        <!-- 表單元件資料綁定 -->
+        <!-- v-bind 格式的語法
+           v-bind:[HTML Element 屬性名稱]="資料屬性 / JaveScript 表示式" -->
+        <!-- 使用 v-bind 綁定至 value -->
+        <input type="text" v-bind:value="TextOne"><br>
+        <!-- 使用 v-bind 縮寫綁定至 value -->
+        <input type="text" :value="TextTwo">
+
+        <!----------------------------------------------------->
+
+        <!-- HTML Element 樣式資料綁定 -->
+        <!-- class 樣式 class 名稱綁定 -->
+        <div v-bind:class="className">
+            class 樣式 class 名稱綁定
+        </div>
+
+        <!-- style 樣式綁定 -->
+        <div v-bind:style="customStyle">
+            style 樣式綁定
+        </div>
+
+        <!----------------------------------------------------->
+
+        <!-- 圖片資料綁定 -->
+        圖檔相對位置資料綁定:<br>
+        <img v-bind:src="imagePath" alt="初音 ミク">
+
+        <!----------------------------------------------------->
+
+        <!-- 列表資料綁定 - v-for -->
+        <!-- Array 列表資料 -->
+        <!-- v-for="([陣列元素], [索引值]) in [陣列屬性名稱]" -->
+        <ul>
+            <li v-for="(item,index) in colors" v-bind:key="index">{{ item }}</li>
+        </ul>
+
+        <!-- Object 列表資料 -->
+        <!-- v-for="([屬性質], [屬性名稱], [索引值]) in [陣列屬性名稱]" -->
+        <ul>
+            <li v-for="(value, propertyName, index) in school" v-bind:key="index">{{ propertyName }} - {{ value }}</li>
+        </ul>
+
+        <!----------------------------------------------------->
+
+        <!-- Swiper 網站輪播圖(引用 Bootstrap CSS / JS) -->
+        <!-- Bootstrap 基本的輪播在 bootstrapSwiper.html 供參考 -->
+
+        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleIndicators" v-for="(item,index) in slideList"
+                    v-bind:data-bs-slide-to="index" v-bind:class="{ active: index === 0 }" v-bind::key="index"></button>
+
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item" v-for="(item,index) in slideList" v-bind:class="{ active: index === 0 }"
+                    v-bind::key="index">
+                    <img class="d-block w-100" v-bind:src="item" v-bind:alt="`${index+1}st slide`">
+                </div>
+            </div>
+
+            <!-- 以下是 bootstrap button 沒使用到 Vue-->
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+
+        <!----------------------------------------------------->
+
+        <!-- 顯示與隱藏控制 - v-show -->
+        <!-- v-show="[變數值 / 單行判斷式]" -->
+
+        <div class="img-container" v-for="(image, index) in imageListOne" v-bind::key="index">
+            <!-- 圖片名稱 -->
+            {{ image.name }}<br>
+
+            <!-- 判斷結果文字 -->
+            {{ image. is_cat === true ? "是貓貓" : "不是貓貓就不顯示圖片" }}<br>
+
+            <!-- v-show 結果 -->
+            <img v-bind:src="image.path" v-show="image.is_cat">
+        </div>
+
+        <!----------------------------------------------------->
+
+        <!-- 條件判斷 - v-if / v-else-if / v-else -->
+        <!-- v-if="[變數值 / 單行判斷式]" -->
+
+        <div class="img-container" v-for="(img, index) in imageListTwo" v-bind::key="index">
+            <!-- 圖片名稱 -->
+            {{ img.name }}<br>
+
+            <!-- v-if / v-else-if / v-else 文字顯示判斷 -->
+            <span v-if="img.is_swimming_cat === true"> 有貓貓在游泳，好Cute~ </span>
+
+            <span v-else-if="img.is_cat === true">是貓貓，但貓貓沒有游泳所以不顯示圖片</span>
+
+            <span v-else>不是貓貓</span>
+
+            <br>
+
+            <!-- v-if 圖片顯示判斷 -->
+            <img v-bind:src="img.path" v-if="img.is_swimming_cat">
+        </div>
+
+        <!----------------------------------------------------->
+        <!-- $el 與 $refs 操作 (this) -->
+        <div style="width: 600px; height: 200px; color: aquamarine;">
+            這裡是 $el 範圍內<br>
+            寬度: {{ el.width }}<br>
+            高度: {{ el.height }}<br>
+            <div ref="ref-example" class="ref-example">
+                這裡是 $refs["ref-example"] 範圍內<br>
+                寬度: {{ ref.width }}<br>
+                高度: {{ ref.height }}
+            </div>
+        </div>
+
+        <!----------------------------------------------------->
+
+    </div>
+
+
+
+    <!-- Vue 3 CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@3.5.13/dist/vue.global.min.js"></script>
+
+    <!-- Bootstrap JS/ JQuery JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"
+        integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <script src="./app.js"></script>
+
+
+</body>
+
+</html>
