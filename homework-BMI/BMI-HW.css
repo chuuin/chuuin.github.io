@@ -1,0 +1,62 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: bisque;
+}
+
+.top {
+    height: 20px;
+    width: 80%;
+    /* background-color: aqua; */
+    margin: auto;
+    margin-top: 20px;
+}
+
+.annotation {
+    width: 60%;
+    height: 150px;
+    /* background-color: aqua; */
+    margin: auto;
+    text-align: center;
+}
+
+.clavlator {
+    width: 80%;
+    height: 500px;
+
+    margin: auto;
+    text-align: center;
+}
+
+
+table {
+    width: 500px;
+    height: 200px;
+    margin: auto;
+    margin-top: 50px;
+    border: 1px solid black;
+    text-align: center;
+
+}
+
+input {
+    width: 100px;
+    border-radius: 5px;
+    box-shadow: 1px 1px 2px 2px grey;
+    margin: 5px 10px 5px 5px;
+
+}
+
+button {
+    border-radius: 5px;
+}
+
+th,
+td {
+    background-color: rgb(199, 151, 244);
+    border: 2px solid black;
+}

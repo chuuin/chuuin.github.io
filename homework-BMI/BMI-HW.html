@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI</title>
+    <link rel="stylesheet" href="../homework-BMI/BMI-HW.css">
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <div class="top">
+        <sapn>BMI值計算</span>
+    </div>
+    <hr style="width: 80%;">
+    <main>
+        <div class="annotation">
+            <p><strong>MI值計算公式:</strong> BMI = 體重(公斤) / 身高<sup>2</sup>(公尺<sup>2</sup>)</p>
+            <p>例如：一個52公斤的人，身高是155公分，則BMI為 :</p>
+            <h5 style="color: blue;">52(公斤)/1.55<sup>2</sup> ( 公尺<sup>2</sup> )= 21.6</h5>
+            <h4 style="color: red;">體重正常範圍為 BMI=18.5～24</h4>
+        </div>
+        <hr style="width: 60%; border-top:2px dashed gray;">
+        <div class="clavlator">
+            <h5 style="color: purple;">快看看自己的BMI是否在理想範圍吧!</h5>
+            身高:<input class="height" type="text" min="0" max="250">cm
+            <button class="calc">開始計算</button>
+            <br><br>
+            體重:<input class="weight" type="text" min="0" max="500">kg
+            <button class="clear">清除重算</button>
+            <br><br><br>
+            <span>你的BMI為</span>
+            <br>
+            <input class="answer" type="text">
+            <table>
+                <thead>
+                    <tr>
+                        <th></th>
+                        <th>
+                            <span>身體質量指數(BMI)</span>
+                            <br>
+                            <span>(kg/m<sup>2</sup>)</span>
+                        </th>
+                        <th>
+                            <span>腰圍</span>
+                            <br>
+                            <span>(cm)</span>
+                        </th>
+
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>體重過輕</td>
+                        <td>BMI ＜ 18.5</td>
+                        <td>-</td>
+
+                    </tr>
+                    <tr>
+                        <td>正常範圍</td>
+                        <td>18.5≦BMI＜24</td>
+                        <td>-</td>
+                    </tr>
+                    <tr>
+                        <td>異常範圍</td>
+                        <td><span>過重：24≦BMI＜27</span>
+                            <br>
+                            <span>輕度肥胖：27≦BMI＜30</span>
+                            <br>
+                            <span>中度肥胖：30≦BMI＜35</span>
+                            <br>
+                            <span>重度肥胖：BMI≧35　</span>
+
+                        </td>
+                        <td><span>男性：≧90公分</span>
+                            <br>
+                            <span>女性：≧80公分</span>
+
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </main>
+</body>
+<script src="../homework-BMI/BMI-HW.js"></script>
+</html>

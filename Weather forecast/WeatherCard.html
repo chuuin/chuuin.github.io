@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>天氣卡片HomeWork</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0px;
+            padding: 0px;
+            
+        }
+
+        /* body {
+            background-color: #ceecf6;
+        } */
+
+        * body {
+            padding: 0px;
+            margin: 0px;
+            /* background-color: #ceecf6; */
+            background-image: url("./img/view3.jpg");
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+
+
+        }
+
+        /* 導覽列 */
+        nav {
+            display: flex;
+            justify-content:space-around;
+
+        }
+
+        .area-btn {
+            width:100px;
+            height: 50px;
+            border: 1px solid blanchedalmond;
+            border-radius: 30px;
+            margin: 20px 10px 20px;
+            cursor: pointer;
+        }
+
+        /* main {
+            width: 100%;
+
+        } */
+
+        /* 天氣卡片 */
+        .container {
+            /* width:100%; */
+            width: calc(100% - 40px);
+            margin: 0px 20px 20px;
+            /* background-color: antiquewhite; */
+
+        }
+
+        .weather-card {
+
+            display: grid;
+            /* margin: auto; */
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+
+            gap: 30px;
+            /* 設置列之間的間距 */
+        }
+
+        .city-card {
+            width: 200px;
+            height: 250px;
+            background-color: #7AFEC6;
+            /* gap: 30px; */
+            text-align: center;
+            border-radius: 15px;
+        }
+
+        .city-card p {
+            /* color: white; */
+            margin: 5px 0px;
+        }
+
+        .img-weather {
+            width: 130px;
+            height: 130px;
+            padding: 10px;
+        }
+
+        .active {
+            background-color: #FFF4C1;
+
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <!-- 北部 中部  南部  東部 離島 -->
+        <button type="button" class="area-btn" onclick="filter('all')">全部</button>
+        <button type="button" class="area-btn" onclick="filter(north)">北部</button>
+        <button type="button" class="area-btn" onclick="filter(center)">中部</button>
+        <button type="button" class="area-btn" onclick="filter(south)">南部</button>
+        <button type="button" class="area-btn" onclick="filter(east)">東部</button>
+        <button type="button" class="area-btn" onclick="filter(island)">離島</button>
+    </nav>
+    <main>
+        <div class="container">
+            <div class="weather-card">
+                <!-- <div class="city-card">
+                <img src='' alt='降雨機率圖' class='img-weather'>
+                <div class="city-name">
+                    <p>台北市</p>
+                </div>
+                <div class="city-temp">
+                    <p>15℃ ~ 26℃</p>
+                </div>
+                <div class="rainny-percent">
+                    <p>降雨機率:0%</p>
+                </div>
+                <div class="apparent-temp">
+                    <p>體感:舒適
+                    <p>
+                </div> -->
+            </div>
+        </div>
+    </main>
+    <script>
+        const weatherCard = document.querySelector('.weather-card');
+        // 導覽列的所有btns
+        const navButtons = document.querySelectorAll('nav button');
+        console.log(navButtons);
+        // 縣市按鈕
+        const areaBtn = document.querySelector('.area-btn');
+
+        // 變數宣告各縣市隸屬地區的array
+        const north = ['臺北市', '新北市', '基隆市', '桃園市', '新竹市', '桃園市', '新竹縣', '宜蘭縣'];
+        const center = ['苗栗縣', '臺中市', '彰化縣', '南投縣', '雲林縣'];
+        const south = ['嘉義市', '嘉義縣', '臺南市', '高雄市', '屏東縣', '澎湖縣'];
+        const east = ['花蓮縣', '臺東縣'];
+        const island = ['金門縣', '連江縣'];
+
+        // 導覽列按鈕們的每一個按鈕  (運用「頁籤」)
+        navButtons.forEach((button, index) => {
+            button.addEventListener('click', function () {
+                // 邏輯第二步、移除上次加的clsassList （綜合兩者邏輯脈絡意思：需要先移除上次的，再加上這次的）
+                navButtons.forEach((element) => {
+                    element.classList.remove('active');
+                })
+                // 邏輯第一步、點到就加clsassList
+                button.classList.add('active');
+            })
+        })
+
+        // fetch('api網址')
+        fetch('https://opendata.cwa.gov.tw/api/v1/rest/datastore/F-C0032-001?Authorization=CWA-28B38041-DC4C-444C-8554-304E7EAA7E0D')
+            .then(function (response) {
+                // 解譯
+                return response.json();
+            })
+            // 提取api資料
+            .then(function (data) {
+                console.log(data);// 印出api內資料有什麼
+                console.log(data.records.location); // 印出作業需要的api資料（型態：陣列）
+
+                //為了提取的資料是array 存進去變數裡  方便遍歷
+                let locations = data.records.location;
+                console.log(Array.isArray(locations));
+
+                locations.forEach(item => {
+                    // 找縣市
+                    let location = item.locationName;
+                    // 最高溫
+                    let tempMax = item.weatherElement[4].time[2].parameter.parameterName;
+                    // 最低溫
+                    let tempMin = item.weatherElement[2].time[2].parameter.parameterName;
+                    // 體感
+                    let feel = item.weatherElement[3].time[2].parameter.parameterName
+                    // 降雨機率
+                    let rain = item.weatherElement[1].time[2].parameter.parameterName
+                    // 天氣圖
+                    let img_path;
+
+                    if (rain < 25) {
+                        img_path = './image/sunny.gif';
+                    } else if (rain <= 50) {
+                        img_path = './image/mostlysunny.gif'
+                    } else if (rain < 50) {
+                        img_path = './image/rain.gif'
+                    } else {
+                        img_path = './image/storm.gif'
+                    }
+
+                    // console.log("縣市" + location + "。最高溫" + tempMax + "。最低溫" + tempMin + "。體感" + feel + "。降雨機率" + rain);
+
+                    weatherCard.innerHTML += `
+                    <div class="city-card" data-cityselect="${location}">
+                        <img src='${img_path}'  alt='降雨機率圖' class='img-weather'>
+                        <div class="city-name"><p>${location}</p></div>
+                        <div class="city-temp"><p>${tempMin}℃ ~ ${tempMax}℃</p></div>
+                        <div class="rainny-percent"><p>降雨機率：${rain}%</p></div>
+                        <div class="apparent-temp"><p>體感：${feel}</p></div>
+                    </div>
+                    `;
+                })
+
+            })
+
+
+        // HTML綁onclick="filter(areas)" (參數放北部、中部....)
+        function filter(areas) {
+            // 在 fetch 完成後，才能抓取天氣卡片的所有縣市
+            let allCities = document.querySelectorAll('.city-card');
+            // console.log(allCities);
+
+
+            // 所有城市的每一個城市
+            allCities.forEach((elementcity) => {
+                // 若參數areas陣列 選到的是all
+                if (areas == 'all') {
+                    elementcity.style.display = 'block';
+                } else {
+                    elementcity.style.display = 'none';
+                    // console.log(areas);    //印出選取區域的縣市
+
+
+                    // HTML綁data-attribute 遍歷每個地區
+                    // (e是字串，data-* 只能用在元素，不能用在字串）
+                    // 假如選到台北市 則台北市就是e
+                    /*
+                    // 寫法一、
+                    areas.forEach((e) => {
+                        // console.log(areas);
+                        // let citySelect = document.querySelector(`.city-card[data-cityselect="${e}"]`)
+                        console.log(elementcity.dataset.cityselect);
+                        // 語意：if(陣列內的「例如.台北市」等於 卡片所有縣市的每一張縣市 就出現)
+                        if (e == elementcity.dataset.cityselect) {
+                            // console.log(123);
+                            elementcity.style.display = 'block';
+                        }
+                    })
+                    */
+
+                    // 寫法二、精簡化 
+                    // array.includes()判斷array是否包含「某元素」
+                    if (areas.includes(elementcity.dataset.cityselect)) {
+                        elementcity.style.display = 'block';
+                    }
+                }
+            })
+        }
+    </script>
+    <!-- "* 熟悉 fetch 的應用
+* 熟悉 API 的應用
+* 熟悉 物件 的應用
+* 熟悉 二維陣列 的應用
+* 熟悉 開放資料  的應用
+========作業要求==============
+1.利用fetch取得天氣資料顯示在網頁上
+2.實作頁籤切換不同區域的天氣卡片
+3.天氣卡片需要有
+(1)地區名字
+(2)最高溫到最低溫
+(3)降雨機率
+(4)天氣體感敘述
+(5)依據天氣描述顯示圖片" -->
+</body>
+
+</html>
