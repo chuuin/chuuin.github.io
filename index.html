@@ -1,32 +1,38 @@
-<!DOCTYPE html>
-<html lang="en">
+﻿<!DOCTYPE html>
+<html lang="zh-Hant">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Portfolio</title>
+    <title data-i18n="site.title">Portfolio</title>
+    <link rel="icon" href="./image/favicon.svg" type="image/svg+xml">
 </head>
 <!-- === CSS Files === -->
 <link rel="stylesheet" href="./css/style.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
-<body>
+<body class="dark">
 
     <!--===== Main Container Start =====-->
     <div class="main-container">
         <!-- ==== Aside Start ==== -->
         <div class="aside">
             <div class="logo">
-                <a href=""><span>IAN</span></a>
+                <a href="#home"><span data-i18n="site.logo">IAN</span></a>
             </div>
             <div class="nav-toggler">
                 <span></span>
             </div>
             <ul class="nav">
-                <li><a href="#home" class="active"><i class="fa fa-home"></i>我的自傳</a></li>
-                <li><a href="#about"><i class="fa fa-user"></i>關於我</a></li>
-                <li><a href="#Expertise"><i class="fa fa-list"></i>專業知識</a></li>
-                <li><a href="#portfolio"><i class="fa fa-briefcase"></i>作品集</a></li>
+                <li><a href="#home" class="active"><i class="fa fa-home"></i><span data-i18n="nav.home">Home</span></a>
+                </li>
+                <li><a href="#about"><i class="fa fa-user"></i><span data-i18n="nav.about">About</span></a></li>
+                <li><a href="#Expertise"><i class="fa fa-list"></i><span data-i18n="nav.expertise">Skills</span></a>
+                </li>
+                <li><a href="#portfolio"><i class="fa fa-briefcase"></i><span
+                            data-i18n="nav.portfolio">Projects</span></a></li>
+                <li><a href="#contact"><i class="fa fa-envelope"></i><span data-i18n="nav.contact">Contact</span></a>
+                </li>
             </ul>
         </div>
         <!-- ==== Aside End ==== -->
@@ -37,29 +43,29 @@
                 <div class="container">
                     <div class="row">
                         <div class="home-info padd-15">
-                            <h3 class="hello">Hello,我是王中印 <span class="name">( IAN ) </span></h3>
-                            <p>
-                                　　　我目前是一位專注於電商領域的前端工程師，擁有 <span class="hello">React 與 Vue
-                                    的雙框架開發</span>經驗。與一般開發者不同，我具備深厚的 <span class="hello">SEO
-                                    與數據分析</span>背景，這使我在建構頁面架構時，不僅能達成功能實作，更能從網站爬蟲友善度、頁面加載效能（LCP/FID）以及使用者行為數據的角度，優化產品的轉換效率與技術
-                                指標。<br>
-                                在近期參與的電商平台專案中，我負責從前台（商品篩選、購物車、結帳流程）到後台管理系統（庫存與運費邏輯）的全面迭代。我擅長處理複雜的狀態管理與 <span
-                                    class="hello">RESTful API 串接</span>，並在開發中落實以下準則：
-
-                                元件化與系統化： 透過抽離共用邏輯與建立 SCSS 樣式規範，大幅提升程式碼的重用性，減少後續維護成本。
-                                使用者體驗優化： 針對 RWD 與跨瀏覽器相容性進行深度調整，確保在各種行動裝置上皆有流暢且直覺的購物體驗。
-                                穩定開發流程： 嚴格遵循 Git Flow 分支管理規範，並具備快速定位與修復 Bug 的能力，確保交付品質的穩定性。
-
-                                <br>
-                                在開發效率上，我能純熟<span class="hello">運用 AI
-                                    工具輔助</span>需求拆解與單元測試編寫，將其整合進日常工作流中，以加速原型產出並提升代碼重構的精準度。我對技術保持高度熱誠，未來期許能持續深化 React/Vue
-                                生態系開發，並發揮「數據驅動」的特質，在提升網站性能與工程化維護的同時，為團隊與產品創造可量化的商業價值。
+                            <h3 class="hello" data-i18n-html="home.greeting">你好，我是 <span class="name">IAN</span></h3>
+                            <p data-i18n-html="home.intro">
+                                我是一位專注於電商領域的前端工程師，擁有 React 與 Vue 的雙框架開發經驗。與一般開發者不同，我具備深厚的 <span class="hello">SEO
+                                    與數據分析</span> 背景，能從爬蟲友善度、頁面加載效能（LCP/FID）與使用者行為數據角度，優化產品的轉換效率與技術指標。<br><br>
+                                近期參與的電商平台專案中，我負責前台（商品篩選、購物車、結帳流程）到後台管理（庫存與運費邏輯）的全面迭代，擅長處理複雜狀態管理與 RESTful API
+                                串接，並在開發中落實以下準則：<br>
+                                • <span class="hello">元件化與系統化：</span>抽離共用邏輯與建立 SCSS 樣式規範，提升重用性並降低維護成本。<br>
+                                • <span class="hello">使用者體驗優化：</span>針對 RWD 與跨瀏覽器相容性深度調整，確保行動裝置購物體驗流暢直覺。<br>
+                                • <span class="hello">穩定開發流程：</span>遵循 Git Flow 並快速定位修復 Bug，確保交付品質。<br><br>
+                                我能純熟運用 AI 工具協助需求拆解與單元測試編寫，整合進日常工作流以加速原型產出並提升代碼重構精準度。未來期許持續深化 React/Vue
+                                生態系開發，發揮「數據驅動」特質，在提升網站性能與工程化維護的同時，為團隊與產品創造可量化的商業價值。
                             </p>
 
-                            <!-- <a href="#" class="btn download-cv">Download CV</a> -->
+                            <div class="hero-cta">
+                                <a href="#portfolio" class="btn" data-i18n="cta.projects">Projects</a>
+                                <a href="https://github.com/chuuin" class="btn btn-outline"
+                                    data-i18n="cta.github">GitHub</a>
+                                <a href="#contact" class="btn btn-ghost" data-i18n="cta.contact">Contact</a>
+                            </div>
                         </div>
                         <div class="home-img padd-15">
-                            <img src="./image/Personal-photo.jpg " alt="">
+                            <img src="./image/Personal-photo.jpg " alt="Personal-photo" data-i18n="home.photoAlt"
+                                data-i18n-attr="alt">
                         </div>
                     </div>
                 </div>
@@ -71,396 +77,454 @@
                 <div class="container">
                     <div class="row">
                         <div class="section-title padd-15">
-                            <h2>About Me</h2>
+                            <h2 data-i18n="about.title">About</h2>
                         </div>
                     </div>
-                    <div class="row">
-                        <div class="about-content padd-15">
-                            <!-- <div class="row">
-                                <div class="about-text padd-15">
-                                    <h3>我叫王中印<span>Front-end Engineer</span></h3>
-                                    <p>文字敘述</p>
-                                </div>
-                            </div> -->
-                            <div class="row">
-                                <div class="personal-info padd-15">
-                                    <div class="row">
-                                        <div class="info-item padd-15">
-                                            <p>Birthday:<span>08 July 1997</span></p>
-                                        </div>
-                                        <div class="info-item padd-15">
-                                            <p>Age:<span>27</span></p>
-                                        </div>
-                                        <div class="info-item padd-15">
-                                            <p>Phone:<span>0975-394597</span></p>
-                                        </div>
-                                        <div class="info-item padd-15">
-                                            <p>Email:<span>ianyin06060708@gmail.com</span></p>
-                                        </div>
-                                        <div class="info-item padd-15">
-                                            <p>Expertise:<span>汽車修護丙級</span></p>
-                                        </div>
-                                        <div class="info-item padd-15">
-                                            <p>Expertise:<span>電腦輔助立體製圖 CAD 丙級</span></p>
-                                        </div>
-                                        <div class="info-item padd-15">
-                                            <p>Language:<span>透過自學和參與線上英語課程，不斷提升英文能力。</span></p>
-                                        </div>
-                                        <div class="info-item padd-15">
-                                            <p>Language:<span>日文-普通</span></p>
-                                        </div>
-                                        <div class="info-item padd-15">
-                                            <p>Language:<span>中文-精通</span></p>
-                                        </div>
-                                        <div class="info-item padd-15">
-                                            <p>Language:<span>台語-精通</span></p>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="buttons padd-15">
-                                            <a href="#contact" data-hire="1" class="btn hire-me">聯絡我</a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="skills padd-15">
-                                    <div class="row">
-                                        <div class="my-profession">My expertise (專長) are <span
-                                                class="typing">HTML</span></div>
-                                        <div class="skill-item padd-15">
-                                            <h5>HTML</h5>
-                                            <div class="progress">
-                                                <div class="progress-in" style="width: 70%;"></div>
-                                                <div class="skill-percent">70%</div>
-                                            </div>
-                                        </div>
-                                        <div class="skill-item padd-15">
-                                            <h5>CSS</h5>
-                                            <div class="progress">
-                                                <div class="progress-in" style="width: 75%;"></div>
-                                                <div class="skill-percent">75%</div>
-                                            </div>
-                                        </div>
-                                        <div class="skill-item padd-15">
-                                            <h5>SCSS</h5>
-                                            <div class="progress">
-                                                <div class="progress-in" style="width: 75%;"></div>
-                                                <div class="skill-percent">75%</div>
-                                            </div>
-                                        </div>
-                                        <div class="skill-item padd-15">
-                                            <h5>Bootstrap</h5>
-                                            <div class="progress">
-                                                <div class="progress-in" style="width: 70%;"></div>
-                                                <div class="skill-percent">70%</div>
-                                            </div>
-                                        </div>
-                                        <div class="skill-item padd-15">
-                                            <h5>JavaScript</h5>
-                                            <div class="progress">
-                                                <div class="progress-in" style="width: 60%;"></div>
-                                                <div class="skill-percent">60%</div>
-                                            </div>
-                                        </div>
-                                        <div class="skill-item padd-15">
-                                            <h5>Vue.JS</h5>
-                                            <div class="progress">
-                                                <div class="progress-in" style="width: 60%;"></div>
-                                                <div class="skill-percent">60%</div>
-                                            </div>
-                                        </div>
-                                        <div class="skill-item padd-15">
-                                            <h5>Git</h5>
-                                            <div class="progress">
-                                                <div class="progress-in" style="width: 75%;"></div>
-                                                <div class="skill-percent">75%</div>
-                                            </div>
-                                        </div>
-                                        <div class="skill-item padd-15">
-                                            <h5>Figma</h5>
-                                            <div class="progress">
-                                                <div class="progress-in" style="width: 65%;"></div>
-                                                <div class="skill-percent">65%</div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
+                    <div class="row about-hero">
+                        <div class="about-card padd-15">
+                            <div class="about-card-inner">
+                                <h3 data-i18n="about.summaryTitle">Profile</h3>
+                                <p data-i18n="about.summary">
+                                    Front-end engineer focused on e-commerce, balancing SEO, performance, and
+                                    maintainability in production-ready UI.
+                                </p>
+                                <ul class="about-highlights">
+                                    <li data-i18n="about.highlights.0">Component-driven architecture with reusable UI
+                                        patterns.</li>
+                                    <li data-i18n="about.highlights.1">State, form, and error handling for complex
+                                        purchase flows.</li>
+                                    <li data-i18n="about.highlights.2">SEO/CWV mindset for crawlability and conversion
+                                        impact.</li>
+                                </ul>
                             </div>
-                            <div class="row">
-                                <div class="education padd-15">
-                                    <h3 class="title">Education(教育)</h3>
-                                    <div class="row">
-                                        <div class="timeline-box padd-15">
-                                            <div class="timeline shadow-dark">
-                                                <!-- ==== timline item ==== -->
-                                                <div class="timeline-item">
-                                                    <div class="circle-dot"></div>
-                                                    <h3 class="timeline-date">
-                                                        <i class="fa fa-calendar"></i>2023/10 - 2024/02
-                                                    </h3>
-                                                    <h4 class="timeline-title">學歷</h4>
-                                                    <p class="timeline-text">逢甲大學 Figma UI/UX 與 Vue.JS 前端專業訓練</p>
-                                                </div>
-                                                <!-- ==== timline item ==== -->
-                                                <div class="timeline-item">
-                                                    <div class="circle-dot"></div>
-                                                    <h3 class="timeline-date">
-                                                        <i class="fa fa-calendar"></i>201 - 2016
-                                                    </h3>
-                                                    <h4 class="timeline-title">高職</h4>
-                                                    <p class="timeline-text">國立永靖高級職業工業學校</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="experience padd-15">
-                                    <h3 class="title">Experience(經歷)</h3>
-                                    <div class="row">
-                                        <div class="timeline-box padd-15">
-                                            <div class="timeline shadow-dark">
-                                                <!-- ==== timline item ==== -->
-                                                <div class="timeline-item">
-                                                    <div class="circle-dot"></div>
-                                                    <h3 class="timeline-date">
-                                                        <i class="fa fa-calendar"></i>2024 - 2025
-                                                    </h3>
-                                                    <h4 class="timeline-title">華杰品牌行銷有限公司(SEO助理工程師)</h4>
-                                                    <p class="timeline-text">網站架構優化、內容策略制定與優化、關鍵字研究、以及網站數據監測與分析。</p>
-
-                                                </div>
-                                                <!-- ==== timline item ==== -->
-                                                <div class="timeline-item">
-                                                    <div class="circle-dot"></div>
-                                                    <h3 class="timeline-date">
-                                                        <i class="fa fa-calendar"></i>2020 - 2023
-                                                    </h3>
-                                                    <h4 class="timeline-title">樹森開發股份有限公司(外務人員)</h4>
-                                                    <p class="timeline-text">1. 培養了出色的時間管理和組織技能。</p>
-                                                    <p class="timeline-text">2. 確保客戶獲得卓越的服務體驗。</p>
-                                                    <p class="timeline-text">3.瞭解準確性和可靠性對客戶至關重要，因此我注重細節並保持良好的溝通。</p>
-
-                                                </div>
-                                                <!-- ==== timline item ==== -->
-                                                <div class="timeline-item">
-                                                    <div class="circle-dot"></div>
-                                                    <h3 class="timeline-date">
-                                                        <i class="fa fa-calendar"></i>2019 - 2020
-                                                    </h3>
-                                                    <h4 class="timeline-title">六元實業有限公司(場內人員)</h4>
-                                                    <p class="timeline-text">讓我瞭解團隊合作的重要性。</p>
-                                                </div>
-                                                <!-- ==== timline item ==== -->
-                                                <div class="timeline-item">
-                                                    <div class="circle-dot"></div>
-                                                    <h3 class="timeline-date">
-                                                        <i class="fa fa-calendar"></i>2018 - 2019
-                                                    </h3>
-                                                    <h4 class="timeline-title">和村輪胎(半技師) </h4>
-                                                    <p class="timeline-text">學習車胎與底盤定位的知識與修補更換技能。</p>
-                                                </div>
-                                                <!-- ==== timline item ==== -->
-                                                <div class="timeline-item">
-                                                    <div class="circle-dot"></div>
-                                                    <h3 class="timeline-date">
-                                                        <i class="fa fa-calendar"></i>2016 - 2018
-                                                    </h3>
-                                                    <h4 class="timeline-title">仁榮汽車修配廠(學徒)</h4>
-                                                    <p class="timeline-text">保養與引擎結構相關知識。</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
+                        </div>
+                        <div class="about-card padd-15">
+                            <div class="about-card-inner">
+                                <h3 data-i18n="about.focusTitle">Engineering Focus</h3>
+                                <ul class="about-focus-list">
+                                    <li data-i18n="about.focus.0">Clean component boundaries and predictable data
+                                        flow.</li>
+                                    <li data-i18n="about.focus.1">Performance tuning (LCP/FID) and render stability.
+                                    </li>
+                                    <li data-i18n="about.focus.2">RWD and cross-browser QA for consistent UX.</li>
+                                    <li data-i18n="about.focus.3">Collaboration-ready handoff and documentation.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row about-hero">
+                        <div class="about-card padd-15 about-tags-card">
+                            <div class="about-card-inner">
+                                <h3 data-i18n="about.tagsTitle">Focus Areas</h3>
+                                <div class="about-tags">
+                                    <span class="about-tag" data-i18n="about.tags.0">Design System</span>
+                                    <span class="about-tag" data-i18n="about.tags.1">State Management</span>
+                                    <span class="about-tag" data-i18n="about.tags.2">API Integration</span>
+                                    <span class="about-tag" data-i18n="about.tags.3">SEO Structure</span>
+                                    <span class="about-tag" data-i18n="about.tags.4">Performance</span>
+                                    <span class="about-tag" data-i18n="about.tags.5">RWD</span>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
-            </section>
-            <!--==== About Section End ====-->
-            <!--==== Expertises Section Start ====-->
-            <section class="Expertise section" id="Expertise">
-                <div class="container">
-                    <div class="row">
-                        <div class="section-title padd-15">
-                            <h2>Expertises</h2>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <!-- ==== Expertise item Start -->
-                        <div class="Expertise-item padd-15">
-                            <div class="Expertise-item-inner">
-                                <div class="icon">
-                                    <i class="fa fa-brands fa-html5"></i>
+                    <div class="row about-content about-timeline">
+                        <div class="experience padd-15">
+                            <h3 class="title" data-i18n="about.experienceTitle">Experience</h3>
+                            <div class="timeline-box">
+                                <div class="timeline shadow-dark">
+                                    <div class="timeline-item">
+                                        <div class="circle-dot"></div>
+                                        <h3 class="timeline-date" data-i18n="about.experience.items.0.date">2025/12–至今
+                                        </h3>
+                                        <h4 class="timeline-title" data-i18n="about.experience.items.0.title">前端工程師｜
+                                            歐維納資訊有限公司</h4>
+                                        <p class="timeline-text" data-i18n="about.experience.items.0.desc1">
+                                            電商平台前台與後台系統開發（React），依需求完成切版與互動功能。</p>
+                                        <p class="timeline-text" data-i18n="about.experience.items.0.desc2">
+                                            前台：商品列表/篩選、商品詳情、購物車、結帳、會員頁維護與迭代。</p>
+                                        <p class="timeline-text" data-i18n="about.experience.items.0.desc3">
+                                            後台：商品、訂單、運費/庫存流程開發，提升營運操作效率。</p>
+                                        <p class="timeline-text" data-i18n="about.experience.items.0.desc4">
+                                            串接 RESTful API，處理 mapping、分頁/搜尋、錯誤回饋與狀態顯示，確保資料一致。</p>
+                                        <p class="timeline-text" data-i18n="about.experience.items.0.desc5">
+                                            建立共用 UI 元件與 SCSS 規範，並落實 RWD/相容性調整。</p>
+                                    </div>
+                                    <div class="timeline-item">
+                                        <div class="circle-dot"></div>
+                                        <h3 class="timeline-date" data-i18n="about.experience.items.1.date">
+                                            2024/4–2025/7</h3>
+                                        <h4 class="timeline-title" data-i18n="about.experience.items.1.title">
+                                            SEO助理工程師｜華杰品牌行銷有限公司</h4>
+                                        <p class="timeline-text" data-i18n="about.experience.items.1.desc1">
+                                            網站架構優化、內容策略制定與優化、關鍵字研究與資料分析。</p>
+                                        <p class="timeline-text" data-i18n="about.experience.items.1.desc2">
+                                            Google Analytics/GTM 追蹤與網站成效監測。</p>
+                                    </div>
+                                    <div class="timeline-item">
+                                        <div class="circle-dot"></div>
+                                        <h3 class="timeline-date" data-i18n="about.experience.items.2.date">
+                                            2020/8–2023/10</h3>
+                                        <h4 class="timeline-title" data-i18n="about.experience.items.2.title">
+                                            外務人員（倉儲物流）｜樹森開發股份有限公司</h4>
+                                        <p class="timeline-text" data-i18n="about.experience.items.2.desc1">
+                                            培養時間管理與組織能力，確保流程準時完成。</p>
+                                        <p class="timeline-text" data-i18n="about.experience.items.2.desc2">
+                                            重視準確性與可靠性，注重細節並保持良好溝通。</p>
+                                        <p class="timeline-text" data-i18n="about.experience.items.2.desc3">
+                                            確保客戶獲得穩定且高品質的服務體驗。</p>
+                                    </div>
                                 </div>
-                                <h4>HTML 5</h4>
-                                <p>我保持對HTML5最新發展的關注，並持續學習新的標準、技術和最佳實踐。這有助於我保持在網頁開發領域的競爭力，並為我的項目提供最新的技術解決方案。</p>
                             </div>
                         </div>
-                        <!-- ==== Expertise item End -->
-                        <!-- ==== Expertise item Start -->
-                        <div class="Expertise-item padd-15">
-                            <div class="Expertise-item-inner">
-                                <div class="icon">
-                                    <i class="fa fa-brands fa-css3-alt"></i>
+                        <div class="education padd-15">
+                            <h3 class="title" data-i18n="about.educationTitle">Education</h3>
+                            <div class="timeline-box">
+                                <div class="timeline shadow-dark">
+                                    <div class="timeline-item">
+                                        <div class="circle-dot"></div>
+                                        <h3 class="timeline-date" data-i18n="about.education.items.0.date">2023–2024
+                                        </h3>
+                                        <h4 class="timeline-title" data-i18n="about.education.items.0.title">Front-End &
+                                            UI/UX Program</h4>
+                                        <p class="timeline-text" data-i18n="about.education.items.0.desc">Completed
+                                            Figma UI/UX and Vue.js coursework with hands-on projects.</p>
+                                    </div>
+                                    <div class="timeline-item">
+                                        <div class="circle-dot"></div>
+                                        <h3 class="timeline-date" data-i18n="about.education.items.1.date">2013–2016
+                                        </h3>
+                                        <h4 class="timeline-title" data-i18n="about.education.items.1.title">Information
+                                            Management (Related)</h4>
+                                        <p class="timeline-text" data-i18n="about.education.items.1.desc">Coursework in
+                                            programming, databases, and web fundamentals.</p>
+                                    </div>
                                 </div>
-                                <h4>CSS</h4>
-                                <p>通過運用其各種屬性，我可以打造出吸引人的、現代的、並且具有互動性的網頁。能夠有效地掌控網站的外觀和風格，從而提供更好的用戶體驗</p>
                             </div>
                         </div>
-                        <!-- ==== Expertise item End -->
-                        <!-- ==== Expertise item Start -->
-                        <div class="Expertise-item padd-15">
-                            <div class="Expertise-item-inner">
-                                <div class="icon">
-                                    <i class="fa fa-brands fa-square-js"></i>
-                                </div>
-                                <h4>JavaScript</h4>
-                                <p>持續學習對DOM、事件、非同步操作、物件導向程式設計、前端框架、瀏覽器存儲和單元測試等多方面的掌握。</p>
-                            </div>
-                        </div>
-                        <!-- ==== Expertise item End -->
-                        <!-- ==== Expertise item Start -->
-                        <div class="Expertise-item padd-15">
-                            <div class="Expertise-item-inner">
-                                <div class="icon">
-                                    <i class="fa fa-brands fa-vuejs"></i>
-                                </div>
-                                <h4>Vue.js</h4>
-                                <p>持續學習對Vue.js包括了組件化開發、資料雙向綁定、生命周期管理、路由管理和狀態管理等多方面的技能，能夠構建彈性且高效的Vue.js。</p>
-                            </div>
-                        </div>
-                        <!-- ==== Expertise item End -->
-                        <!-- ==== Expertise item Start -->
-                        <div class="Expertise-item padd-15">
-                            <div class="Expertise-item-inner">
-                                <div class="icon">
-                                    <i class="fa fa-brands fa-bootstrap"></i>
-                                </div>
-                                <h4>Bootstrap</h4>
-                                <p>能夠迅速建構具有一致性和吸引力的網頁，並在不同專案中提高開發效率。</p>
-                            </div>
-                        </div>
-                        <!-- ==== Expertise item End -->
-                        <!-- ==== Expertise item Start -->
-                        <div class="Expertise-item padd-15">
-                            <div class="Expertise-item-inner">
-                                <div class="icon">
-                                    <i class="fa fa-brands fa-figma"></i>
-                                </div>
-                                <h4>Figma</h4>
-                                <p>高效地進行介面設計、協作與分享、設計系統建立，並為團隊提供一流的設計工具。</p>
-                            </div>
-                        </div>
-                        <!-- ==== Expertise item End -->
-                        <!-- ==== Expertise item Start -->
-                        <div class="Expertise-item padd-15">
-                            <div class="Expertise-item-inner">
-                                <div class="icon">
-                                    <i class="fa fa-brands fa-php"></i>
-                                </div>
-                                <h4>PHP</h4>
-                                <p>高效地進行介面設計、協作與分享、設計系統建立，並為團隊提供一流的設計工具。</p>
-                            </div>
-                        </div>
-                        <!-- ==== Expertise item End -->
                     </div>
                 </div>
             </section>
             <!--==== Expertises Section End ====-->
+            <!--==== Skills Section Start ====-->
+            <section class="expertise section" id="Expertise">
+                <div class="container">
+                    <div class="row">
+                        <div class="section-title padd-15">
+                            <h2 data-i18n="skills.title">Skills</h2>
+                        </div>
+                    </div>
+                    <div class="row skills-grid">
+                        <div class="skill-group padd-15">
+                            <div class="skill-group-inner">
+                                <h3 data-i18n="skills.core.title">Core</h3>
+                                <ul class="skill-list">
+                                    <li><span class="skill-name" data-i18n="skills.core.items.react.name">React</span>
+                                    </li>
+                                    <li><span class="skill-name"
+                                            data-i18n="skills.core.items.typescript.name">TypeScript</span></li>
+                                    <li><span class="skill-name"
+                                            data-i18n="skills.core.items.javascript.name">JavaScript</span></li>
+                                    <li><span class="skill-name" data-i18n="skills.core.items.html.name">HTML</span>
+                                    </li>
+                                    <li><span class="skill-name" data-i18n="skills.core.items.css.name">CSS/SCSS</span>
+                                    </li>
+                                    <li><span class="skill-name" data-i18n="skills.core.items.api.name">API
+                                            Integration</span></li>
+                                    <li><span class="skill-name" data-i18n="skills.core.items.rwd.name">RWD</span></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="skill-group padd-15">
+                            <div class="skill-group-inner">
+                                <h3 data-i18n="skills.engineering.title">Engineering</h3>
+                                <ul class="skill-list">
+                                    <li><span class="skill-name"
+                                            data-i18n="skills.engineering.items.component.name">Componentization</span>
+                                    </li>
+                                    <li><span class="skill-name" data-i18n="skills.engineering.items.state.name">State
+                                            Management</span>
+                                    </li>
+                                    <li><span class="skill-name"
+                                            data-i18n="skills.engineering.items.validation.name">Form Validation</span>
+                                    </li>
+                                    <li><span class="skill-name" data-i18n="skills.engineering.items.errors.name">Error
+                                            Handling</span>
+                                    </li>
+                                    <li><span class="skill-name"
+                                            data-i18n="skills.engineering.items.maintainability.name">Maintainability</span>
+                                    </li>
+                                    <li><span class="skill-name"
+                                            data-i18n="skills.engineering.items.accessibility.name">Accessibility</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="skill-group padd-15">
+                            <div class="skill-group-inner">
+                                <h3 data-i18n="skills.seo.title">SEO & Performance</h3>
+                                <ul class="skill-list">
+                                    <li><span class="skill-name"
+                                            data-i18n="skills.seo.items.meta.name">Meta/OG/Canonical/Schema</span></li>
+                                    <li><span class="skill-name"
+                                            data-i18n="skills.seo.items.sitemap.name">Sitemap/Robots</span></li>
+                                    <li><span class="skill-name"
+                                            data-i18n="skills.seo.items.cwv.name">Lighthouse/CWV</span></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="skill-group padd-15">
+                            <div class="skill-group-inner">
+                                <h3 data-i18n="skills.tools.title">Tools</h3>
+                                <ul class="skill-list">
+                                    <li><span class="skill-name" data-i18n="skills.tools.items.git.name">Git</span></li>
+                                    <li><span class="skill-name" data-i18n="skills.tools.items.ga.name">GA/GTM</span>
+                                    </li>
+                                    <li><span class="skill-name" data-i18n="skills.tools.items.cicd.name">CI/CD</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="skill-group padd-15">
+                            <details class="skill-group-inner skill-group-other">
+                                <summary data-i18n="skills.other.title">Other (Exposure)</summary>
+                                <ul class="skill-list">
+                                    <li><span class="skill-name" data-i18n="skills.other.items.figma.name">Figma</span>
+                                    </li>
+                                    <li><span class="skill-name" data-i18n="skills.other.items.php.name">PHP</span></li>
+                                </ul>
+                            </details>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!--==== Skills Section End ====-->
             <!--==== Portfolio Section Start ====-->
             <section class="portfolio section" id="portfolio">
                 <div class="container">
                     <div class="row">
                         <div class="section-title padd-15">
-                            <h2>Portfolio</h2>
+                            <h2 data-i18n="portfolio.title">Projects</h2>
                         </div>
                     </div>
-                    <!-- <div class="row">
-                        <div class="portfolio-heading padd-15">
-                            <h2>My Last Porjects(最新項目):</h2>
-                        </div>
-                    </div> -->
-                    <div class="row">
-                        <!-- ==== portfolio item start ==== -->
-                        <div class="portfolio-item padd-15">
+                    <div class="row portfolio-grid">
+                        <div class="portfolio-item padd-15" id="project-weather">
                             <div class="portfolio-item-inner shadow-dark">
                                 <div class="portfolio-img">
-                                    <img src="./image/Google-Art.jpg" alt="">
-                                    <a class="padd-15"
-                                        href="https://www.figma.com/proto/7BeQLTT03GDENFW37z1ouy/Google-Art?page-id=0%3A1&type=design&node-id=12-126&viewport=1086%2C980%2C0.14&t=5NL2BPJWPAYuKuGQ-1&scaling=min-zoom&mode=design"
-                                        target="_blank">作品名:仿切Google-Art</a>
-                                    <p class="padd-15">作品說明: <br>
-                                        這是我在Figma課程教學中完成的一個仿切Google Art網站的作品，我們的目標是學習和應用基本功能，以及理解界面設計的基本原則。</p>
+                                    <a href="./Weather forecast/WeatherCard.html" target="_blank"><img
+                                            src="./image/Weather.jpg" alt="Weather card preview"
+                                            data-i18n="portfolio.items.weather.alt" data-i18n-attr="alt"></a>
+                                </div>
+                                <div class="portfolio-content">
+                                    <h3 class="portfolio-title" data-i18n="portfolio.items.weather.title">Weather Card
+                                    </h3>
+                                    <p class="portfolio-summary" data-i18n="portfolio.items.weather.summary">Real-time
+                                        weather card with API data and dynamic UI updates.</p>
+                                    <div class="portfolio-meta">
+                                        <p><span class="meta-label" data-i18n="portfolio.roleLabel">Role</span><span
+                                                data-i18n="portfolio.items.weather.role">Front-end development</span>
+                                        </p>
+                                        <p><span class="meta-label" data-i18n="portfolio.stackLabel">Tech
+                                                Stack</span><span data-i18n="portfolio.items.weather.stack">HTML, CSS,
+                                                JavaScript, Weather
+                                                API</span></p>
+                                    </div>
+                                    <h4 class="portfolio-subtitle" data-i18n="portfolio.highlightsLabel">Highlights</h4>
+                                    <ul class="portfolio-highlights">
+                                        <li data-i18n="portfolio.items.weather.highlights.0">Async fetch with loading
+                                            and
+                                            error states</li>
+                                        <li data-i18n="portfolio.items.weather.highlights.1">Dynamic rendering based on
+                                            API response</li>
+                                        <li data-i18n="portfolio.items.weather.highlights.2">Simple state management for
+                                            unit display</li>
+                                        <li data-i18n="portfolio.items.weather.highlights.3">Responsive card layout</li>
+                                    </ul>
+                                    <div class="portfolio-links">
+                                        <a class="btn btn-outline" href="./Weather forecast/WeatherCard.html"
+                                            target="_blank" data-i18n="portfolio.liveDemo">Live Demo</a>
+                                        <a class="btn btn-ghost" href="#" data-i18n="portfolio.githubRepo">GitHub
+                                            Repo</a>
+                                    </div>
+                                    <p class="portfolio-result"><span class="meta-label"
+                                            data-i18n="portfolio.resultLabel">Outcome</span><span
+                                            data-i18n="portfolio.items.weather.result">Stable rendering with graceful
+                                            fallback when API errors occur.</span></p>
                                 </div>
                             </div>
                         </div>
-                        <!-- ==== portfolio item end ==== -->
-                        <!-- ==== portfolio item start ==== -->
-                        <div class="portfolio-item padd-15">
+                        <div class="portfolio-item padd-15" id="project-microsoft">
                             <div class="portfolio-item-inner shadow-dark">
                                 <div class="portfolio-img">
-                                    <a href="./Weather forecast/WeatherCard.html"><img src="./image/Weather.jpg"
-                                            alt="天氣小卡"></a>
-                                    <a class="padd-15" href="./Weather forecast/WeatherCard.html"
-                                        target="_blank">作品名:天氣小卡</a>
-                                    <p class="padd-15">作品說明: <br>
-                                        我進一步提升了我的網頁開發技能，透過整合JavaScript，實現了一個天氣網站。我使用了API來抓取實時天氣數據，並將其動態顯示在網站上。 <br>
-                                        展現了我在前端開發和資料串接方面的能力。
-                                    </p>
+                                    <a href="./Microsoft%E7%B6%B2%E9%A0%81%E8%A3%BD%E4%BD%9C/Microsoft.html"
+                                        target="_blank"><img src="./image/Microsoft.png"
+                                            alt="Microsoft homepage clone preview"
+                                            data-i18n="portfolio.items.microsoft.alt" data-i18n-attr="alt"></a>
+                                </div>
+                                <div class="portfolio-content">
+                                    <h3 class="portfolio-title" data-i18n="portfolio.items.microsoft.title">Microsoft
+                                        Homepage Clone</h3>
+                                    <p class="portfolio-summary" data-i18n="portfolio.items.microsoft.summary">Homepage
+                                        recreation focused on layout fidelity and UI structure.</p>
+                                    <div class="portfolio-meta">
+                                        <p><span class="meta-label" data-i18n="portfolio.roleLabel">Role</span><span
+                                                data-i18n="portfolio.items.microsoft.role">HTML/CSS
+                                                implementation</span>
+                                        </p>
+                                        <p><span class="meta-label" data-i18n="portfolio.stackLabel">Tech
+                                                Stack</span><span data-i18n="portfolio.items.microsoft.stack">HTML,
+                                                CSS</span></p>
+                                    </div>
+                                    <h4 class="portfolio-subtitle" data-i18n="portfolio.highlightsLabel">Highlights</h4>
+                                    <ul class="portfolio-highlights">
+                                        <li data-i18n="portfolio.items.microsoft.highlights.0">Flex and grid layout for
+                                            complex sections</li>
+                                        <li data-i18n="portfolio.items.microsoft.highlights.1">Reusable section
+                                            structure for maintainability</li>
+                                        <li data-i18n="portfolio.items.microsoft.highlights.2">Responsive breakpoints
+                                            for
+                                            desktop and tablet</li>
+                                        <li data-i18n="portfolio.items.microsoft.highlights.3">Hover/focus states for
+                                            interactive elements</li>
+                                    </ul>
+                                    <div class="portfolio-links">
+                                        <a class="btn btn-outline"
+                                            href="./Microsoft%E7%B6%B2%E9%A0%81%E8%A3%BD%E4%BD%9C/Microsoft.html"
+                                            target="_blank" data-i18n="portfolio.liveDemo">Live Demo</a>
+                                        <a class="btn btn-ghost" href="#" data-i18n="portfolio.githubRepo">GitHub
+                                            Repo</a>
+                                    </div>
+                                    <p class="portfolio-result"><span class="meta-label"
+                                            data-i18n="portfolio.resultLabel">Outcome</span><span
+                                            data-i18n="portfolio.items.microsoft.result">Consistent layout across
+                                            breakpoints with clean structure.</span></p>
                                 </div>
                             </div>
                         </div>
-                        <!-- ==== portfolio item end ==== -->
-
-                        <!-- ==== portfolio item start ==== -->
-                        <div class="portfolio-item padd-15">
+                        <div class="portfolio-item padd-15" id="project-colorgame">
                             <div class="portfolio-item-inner shadow-dark">
                                 <div class="portfolio-img">
-                                    <a href="./Microsoft網頁製作/Microsoft.html"><img src="./image/Microsoft.png"
-                                            alt="仿切微軟首頁"></a>
-                                    <a class="padd-15" href="./Microsoft網頁製作/Microsoft.html"
-                                        target="_blank">作品名:仿切微軟首頁</a>
-                                    <p class="padd-15">作品說明: <br>
-                                        在我的前端開發學習過程中，我致力於提升我的網頁設計和CSS技能。 <br>
-                                        其中一個代表性的專案是仿切微軟首頁，我使用HTML和CSS重現了微軟官方網站的介面和風格。</p>
+                                    <a href="./colorgame/colorgame.html" target="_blank"><img
+                                            src="./image/colorgame.jpg" alt="Color vision game preview"
+                                            data-i18n="portfolio.items.colorgame.alt" data-i18n-attr="alt"></a>
+                                </div>
+                                <div class="portfolio-content">
+                                    <h3 class="portfolio-title" data-i18n="portfolio.items.colorgame.title">Color Vision
+                                        Game</h3>
+                                    <p class="portfolio-summary" data-i18n="portfolio.items.colorgame.summary">A simple
+                                        game to practice JS state and accessibility-friendly UI.</p>
+                                    <div class="portfolio-meta">
+                                        <p><span class="meta-label" data-i18n="portfolio.roleLabel">Role</span><span
+                                                data-i18n="portfolio.items.colorgame.role">Front-end development</span>
+                                        </p>
+                                        <p><span class="meta-label" data-i18n="portfolio.stackLabel">Tech
+                                                Stack</span><span data-i18n="portfolio.items.colorgame.stack">HTML, CSS,
+                                                JavaScript</span>
+                                        </p>
+                                    </div>
+                                    <h4 class="portfolio-subtitle" data-i18n="portfolio.highlightsLabel">Highlights</h4>
+                                    <ul class="portfolio-highlights">
+                                        <li data-i18n="portfolio.items.colorgame.highlights.0">Randomized color
+                                            generation logic</li>
+                                        <li data-i18n="portfolio.items.colorgame.highlights.1">State-driven win/lose
+                                            feedback</li>
+                                        <li data-i18n="portfolio.items.colorgame.highlights.2">High-contrast palette for
+                                            accessibility</li>
+                                        <li data-i18n="portfolio.items.colorgame.highlights.3">Clean DOM event handling
+                                        </li>
+                                    </ul>
+                                    <div class="portfolio-links">
+                                        <a class="btn btn-outline" href="./colorgame/colorgame.html" target="_blank"
+                                            data-i18n="portfolio.liveDemo">Live Demo</a>
+                                        <a class="btn btn-ghost" href="#" data-i18n="portfolio.githubRepo">GitHub
+                                            Repo</a>
+                                    </div>
+                                    <p class="portfolio-result"><span class="meta-label"
+                                            data-i18n="portfolio.resultLabel">Outcome</span><span
+                                            data-i18n="portfolio.items.colorgame.result">Playable game with clear,
+                                            accessible feedback.</span></p>
                                 </div>
                             </div>
                         </div>
-                        <!-- ==== portfolio item end ==== -->
-
-                        <!-- ==== portfolio item start ==== -->
-                        <div class="portfolio-item padd-15">
+                        <div class="portfolio-item padd-15" id="project-bmi">
                             <div class="portfolio-item-inner shadow-dark">
                                 <div class="portfolio-img">
-                                    <a href="./colorgame/colorgame.html"><img src="./image/colorgame.jpg"
-                                            alt="簡易色弱遊戲"></a>
-                                    <a class="padd-15" href="./colorgame/colorgame.html" target="_blank">作品名:簡易色弱遊戲</a>
-                                    <p class="padd-15">作品說明: <br>
-                                        製作了一款簡易色弱遊戲。使用了HTML、CSS和JavaScript。 <br>
-                                        遊戲採用了高對比度的配色方案，以確保即使在有色弱視的情況下，玩家仍能夠輕鬆識別遊戲元素</p>
+                                    <a href="./homework-BMI/BMI-HW.html" target="_blank"><img src="./image/BMI.jpg"
+                                            alt="BMI calculator preview" data-i18n="portfolio.items.bmi.alt"
+                                            data-i18n-attr="alt"></a>
+                                </div>
+                                <div class="portfolio-content">
+                                    <h3 class="portfolio-title" data-i18n="portfolio.items.bmi.title">BMI Calculator
+                                    </h3>
+                                    <p class="portfolio-summary" data-i18n="portfolio.items.bmi.summary">Responsive BMI
+                                        calculator with validation and instant feedback.</p>
+                                    <div class="portfolio-meta">
+                                        <p><span class="meta-label" data-i18n="portfolio.roleLabel">Role</span><span
+                                                data-i18n="portfolio.items.bmi.role">Front-end development</span></p>
+                                        <p><span class="meta-label" data-i18n="portfolio.stackLabel">Tech
+                                                Stack</span><span data-i18n="portfolio.items.bmi.stack">HTML, CSS,
+                                                JavaScript</span></p>
+                                    </div>
+                                    <h4 class="portfolio-subtitle" data-i18n="portfolio.highlightsLabel">Highlights</h4>
+                                    <ul class="portfolio-highlights">
+                                        <li data-i18n="portfolio.items.bmi.highlights.0">Input validation and empty
+                                            state handling</li>
+                                        <li data-i18n="portfolio.items.bmi.highlights.1">Instant calculation with user
+                                            messaging</li>
+                                        <li data-i18n="portfolio.items.bmi.highlights.2">Responsive layout for mobile
+                                            and
+                                            desktop</li>
+                                        <li data-i18n="portfolio.items.bmi.highlights.3">Clear result formatting</li>
+                                    </ul>
+                                    <div class="portfolio-links">
+                                        <a class="btn btn-outline" href="./homework-BMI/BMI-HW.html" target="_blank"
+                                            data-i18n="portfolio.liveDemo">Live Demo</a>
+                                        <a class="btn btn-ghost" href="#" data-i18n="portfolio.githubRepo">GitHub
+                                            Repo</a>
+                                    </div>
+                                    <p class="portfolio-result"><span class="meta-label"
+                                            data-i18n="portfolio.resultLabel">Outcome</span><span
+                                            data-i18n="portfolio.items.bmi.result">Prevents invalid inputs and works
+                                            smoothly across devices.</span></p>
                                 </div>
                             </div>
                         </div>
-                        <!-- ==== portfolio item end ==== -->
-
-
-                        <!-- ==== portfolio item start ==== -->
-                        <div class="portfolio-item padd-15">
-                            <div class="portfolio-item-inner shadow-dark">
-                                <div class="portfolio-img">
-                                    <a href="./homework-BMI/BMI-HW.html"><img src="./image/BMI.jpg" alt="BMI計算網頁"></a>
-                                    <a class="padd-15" href="" target="_blank">作品名:BMI計算網頁</a>
-                                    <p class="padd-15">作品說明: <br>
-                                        作為一個學習項目，使用HTML、CSS和JavaScript實現，支援響應式設計，確保在各種裝置上皆能流暢運作。
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- ==== portfolio item end ==== -->
                     </div>
                 </div>
             </section>
             <!--==== Portfolio Section End ====-->
+
+            <!--==== Contact Section Start ====-->
+            <section class="contact section" id="contact">
+                <div class="container">
+                    <div class="row">
+                        <div class="section-title padd-15">
+                            <h2 data-i18n="contact.title">Contact</h2>
+                        </div>
+                    </div>
+                    <h3 class="contact-title padd-15" data-i18n="contact.ctaTitle">Let's build something impactful.</h3>
+                    <h4 class="contact-sub-title padd-15" data-i18n="contact.ctaSubtitle">Open to front-end roles and
+                        collaboration.</h4>
+                    <div class="row">
+                        <div class="contact-info-item padd-15">
+                            <div class="icon"><i class="fa fa-envelope"></i></div>
+                            <h4 data-i18n="contact.emailLabel">Email</h4>
+                            <p><a href="mailto:ianyin06060708@gmail.com"
+                                    data-i18n="contact.emailValue">ianyin06060708@gmail.com</a></p>
+                        </div>
+                        <div class="contact-info-item padd-15">
+                            <div class="icon"><i class="fa-brands fa-github"></i></div>
+                            <h4 data-i18n="contact.githubLabel">GitHub</h4>
+                            <p><a href="https://github.com/chuuin" data-i18n="contact.githubValue">github.com/chuuin</a>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="row contact-cta">
+                        <a href="#portfolio" class="btn" data-i18n="cta.projects">Projects</a>
+                        <a href="mailto:ianyin06060708@gmail.com" class="btn btn-ghost" data-i18n="cta.email">Email</a>
+                    </div>
+                </div>
+            </section>
+            <!--==== Contact Section End ====-->
 
         </div>
         <!-- ==== Main Content End==== -->
@@ -468,28 +532,53 @@
     <!--===== Main Container End =====-->
     <!-- ==== Style Switcher Start ====  -->
     <div class="style-switcher">
-        <div class="style-switcher-toggler s-icon">
-            <i class="fas fa-cog fa-spin"></i>
+        <div class="switcher-controls">
+            <button type="button" class="style-switcher-toggler s-icon" data-i18n="ui.toggleStyleSwitcher"
+                data-i18n-attr="aria-label" aria-label="Toggle style panel">
+                <i class="fas fa-cog fa-spin"></i>
+            </button>
+            <button type="button" class="day-night s-icon" data-i18n="ui.toggleTheme" data-i18n-attr="aria-label"
+                aria-label="Toggle theme">
+                <i class="fas fa-moon"></i>
+            </button>
+            <button type="button" class="language-switcher s-icon" data-i18n="ui.toggleLanguage"
+                data-i18n-attr="aria-label" aria-label="Toggle language">
+                <i class="fas fa-globe"></i>
+            </button>
         </div>
-        <div class="day-night s-icon">
-            <i class="fas fa-moon"></i>
+        <div class="switcher-panel theme-panel">
+            <h4 data-i18n="ui.themeColors">Theme Colors</h4>
+            <div class="colors">
+                <span class="color-1 color-change"></span>
+                <span class="color-2 color-change"></span>
+                <span class="color-3 color-change"></span>
+                <span class="color-4 color-change"></span>
+                <span class="color-5 color-change"></span>
+            </div>
         </div>
-        <h4>Theme Colors</h4>
-        <div class="colors">
-            <span class="color-1 color-change"></span>
-            <span class="color-2 color-change"></span>
-            <span class="color-3 color-change"></span>
-            <span class="color-4 color-change"></span>
-            <span class="color-5 color-change"></span>
+        <div class="switcher-panel language-panel">
+            <h4 data-i18n="ui.languageTitle">Language</h4>
+            <div class="language-options" role="group" data-i18n="ui.languageGroupLabel" data-i18n-attr="aria-label"
+                aria-label="Language">
+                <button type="button" class="lang-btn" data-lang="zh-Hant" data-i18n="ui.languageZh">Chinese</button>
+                <button type="button" class="lang-btn" data-lang="en" data-i18n="ui.languageEn">English</button>
+                <button type="button" class="lang-btn" data-lang="ja" data-i18n="ui.languageJa">Japanese</button>
+            </div>
         </div>
     </div>
     <!-- ==== Style Switcher End ====  -->
+
+    <button type="button" class="back-to-top" data-i18n="ui.backToTop" data-i18n-attr="aria-label"
+        aria-label="Back to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
 
     <!-- ===== JS Files ==== -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.1.0/typed.umd.js"
         integrity="sha512-+2pW8xXU/rNr7VS+H62aqapfRpqFwnSQh9ap6THjsm41AxgA0MhFRtfrABS+Lx2KHJn82UOrnBKhjZOXpom2LQ=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
+    <script src="./js/i18n.js"></script>
     <script src="./js/script.js"></script>
 </body>
 

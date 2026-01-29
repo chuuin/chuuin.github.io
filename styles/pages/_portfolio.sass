@@ -1,0 +1,83 @@
+﻿.container
+  padding-bottom: 40px
+
+  .portfolio-heading
+    flex: 0 0 100%
+    max-width: 100%
+    margin-bottom: 40px
+
+    h2
+      color: var(--text-black-900)
+      font-weight: 500
+
+  .portfolio-item
+    flex: 33.33%
+    max-width: 33.33%
+    margin-bottom: 30px
+
+    .portfolio-item-inner
+      border: 6px solid var(--skin-color)
+      border-radius: 10px
+      overflow: hidden
+      background: var(--surface-800)
+      display: flex
+      flex-direction: column
+
+      img
+        width: 100%
+        aspect-ratio: 4 / 3
+        height: auto
+        object-fit: cover
+        display: block
+
+      a:not(.btn)
+        color: var(--skin-color)
+        font-weight: 700
+
+.portfolio-content
+  padding: 20px
+  display: flex
+  flex-direction: column
+  gap: 12px
+
+.portfolio-title
+  font-size: 20px
+  font-weight: 700
+  color: var(--text-black-900)
+
+.portfolio-summary
+  color: var(--text-black-700)
+  font-size: 15px
+  line-height: 1.6
+
+.portfolio-subtitle
+  font-size: 16px
+  font-weight: 700
+  color: var(--text-black-900)
+
+.portfolio-meta p
+  font-size: 14px
+  color: var(--text-black-700)
+  margin-bottom: 6px
+
+.meta-label
+  font-weight: 700
+  color: var(--text-black-900)
+  margin-right: 6px
+
+.portfolio-highlights
+  list-style: disc
+  padding-left: 18px
+  color: var(--text-black-700)
+  display: flex
+  flex-direction: column
+  gap: 6px
+
+.portfolio-links
+  display: flex
+  flex-wrap: wrap
+  gap: 10px
+
+.portfolio-result
+  font-size: 14px
+  color: var(--text-black-700)

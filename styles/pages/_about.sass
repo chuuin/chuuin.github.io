@@ -1,0 +1,277 @@
+﻿.about-content
+  flex: 0 0 100%
+  max-width: 100%
+
+.about.section
+  background: radial-gradient(1200px 600px at 10% 10%, rgba(255, 255, 255, 0.06), rgba(0, 0, 0, 0)), radial-gradient(900px 500px at 80% 20%, rgba(255, 255, 255, 0.04), rgba(0, 0, 0, 0)), var(--bg-black-900)
+
+.about
+  .about-hero,
+  .about-timeline
+    gap: 24px
+
+  .about-hero
+    margin-top: 10px
+
+  .about-card
+    flex: 0 0 50%
+    max-width: 50%
+
+  .about-card-inner
+    background: var(--surface-800)
+    border: 1px solid var(--border-soft)
+    border-radius: 20px
+    padding: 24px
+    height: 100%
+    box-shadow: 0 20px 40px var(--glow-soft)
+
+  .about-card h3
+    font-size: 22px
+    font-weight: 700
+    margin-bottom: 12px
+    color: var(--text-black-900)
+
+  .about-card p
+    font-size: 16px
+    line-height: 1.7
+    color: var(--text-black-700)
+
+  .about-highlights,
+  .about-focus-list
+    margin: 16px 0 0
+    padding-left: 0
+
+  .about-highlights li,
+  .about-focus-list li
+    position: relative
+    padding-left: 22px
+    margin-bottom: 10px
+    color: var(--text-black-700)
+    line-height: 1.6
+
+  .about-highlights li::before,
+  .about-focus-list li::before
+    content: ""
+    position: absolute
+    left: 0
+    top: 9px
+    width: 8px
+    height: 8px
+    border-radius: 50%
+    background: var(--skin-color)
+
+  .about-tags-card
+    flex: 0 0 100%
+    max-width: 100%
+
+  .about-tags
+    display: flex
+    flex-wrap: wrap
+    gap: 10px
+    margin-top: 10px
+
+  .about-tag
+    padding: 6px 12px
+    border-radius: 999px
+    border: 1px solid var(--border-soft)
+    background: var(--surface-700)
+    color: var(--text-black-900)
+    font-size: 14px
+
+.about-content .about-text
+  flex: 0 0 100%
+  max-width: 100%
+
+  h3
+    font-size: 24px
+    margin-bottom: 15px
+    font-weight: 700
+    color: var(--text-black-900)
+
+    span
+      color: var(--skin-color)
+
+  p
+    font-size: 16px
+    line-height: 25px
+    color: var(--text-black-700)
+
+.about-content .personal-info
+  flex: 0 0 100%
+  max-width: 100%
+  margin-top: 40px
+  background: var(--surface-800)
+  border: 1px solid var(--border-soft)
+  border-radius: 20px
+  padding: 30px
+  box-shadow: 0 20px 40px var(--glow-soft)
+
+  .info-item
+    flex: 0 0 50%
+    max-width: 50%
+
+    p
+      font-weight: 600
+      padding: 10px 0
+      font-size: 16px
+      color: var(--text-black-900)
+      border-bottom: 1px solid var(--border-soft)
+
+      .info-label
+        color: var(--text-black-700)
+        margin-right: 6px
+        margin-left: 0
+        font-weight: 600
+
+      span
+        font-weight: 800
+        color: var(--text-black-700)
+        margin-left: 4px
+        display: inline-block
+
+  .buttons
+    margin-top: 30px
+
+  .about-contact
+    border-radius: 16px
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.06), rgba(0, 0, 0, 0))
+    border: 1px solid var(--border-soft)
+    padding: 20px
+
+    .contact-actions
+      display: flex
+      flex-wrap: wrap
+      gap: 12px
+
+    .btn
+      padding: 10px 20px
+
+  .buttons .btn
+    margin-top: 10px
+
+.about-content .skills
+  flex: 0 0 40%
+  max-width: 40%
+  margin-top: 40px
+  background: var(--surface-800)
+  border: 1px solid var(--border-soft)
+  border-radius: 20px
+  padding: 30px
+  box-shadow: 0 20px 40px var(--glow-soft)
+
+  .my-profession
+    font-size: 20px
+    font-weight: 800
+    color: var(--text-black-900)
+
+    .typing
+      color: var(--skin-color)
+
+  .skill-item
+    flex: 0 0 100%
+    max-width: 100%
+    margin-bottom: 25px
+
+    h5
+      line-height: 40px
+      font-weight: 600
+      font-size: 16px
+      color: var(--text-black-900)
+      text-transform: capitalize
+
+    .progress
+      background: var(--surface-600)
+      height: 7px
+      border-radius: 4px
+      width: 100%
+      position: relative
+
+      .progress-in
+        position: absolute
+        left: 0
+        top: 0
+        height: 100%
+        border-radius: 4px
+        background: var(--skin-color)
+
+      .skill-percent
+        position: absolute
+        right: 0
+        color: var(--text-black-900)
+        top: -40px
+        font-weight: 400
+        line-height: 40px
+
+.about-content
+  .education,
+  .experience
+    flex: 0 0 50%
+    max-width: 50%
+    margin-top: 30px
+
+    .title
+      font-size: 24px
+      margin-bottom: 30px
+      font-weight: 700
+      color: var(--text-black-900)
+
+    .timeline-box
+      flex: 0 0 100%
+      max-width: 100%
+
+      .timeline
+        background: var(--surface-800)
+        padding: 30px 20px
+        border: 1px solid var(--border-soft)
+        border-radius: 10px
+        width: 100%
+        position: relative
+        box-shadow: 0 18px 36px var(--glow-soft)
+
+        .timeline-item
+          position: relative
+          padding-left: 35px
+          padding-bottom: 50px
+
+          &:last-child
+            padding-bottom: 0
+
+          &::before
+            content: ""
+            width: 1px
+            position: absolute
+            height: 100%
+            left: 7px
+            top: 0
+            background: linear-gradient(180deg, var(--skin-color), transparent)
+
+          .circle-dot
+            position: absolute
+            left: 0
+            top: 0
+            height: 15px
+            width: 15px
+            border-radius: 50%
+            background: var(--skin-color)
+
+          .timeline-date
+            font-weight: 400
+            font-size: 14px
+            margin-bottom: 12px
+            color: var(--text-black-700)
+
+            .fa
+              margin-right: 5px
+
+          .timeline-title
+            font-weight: 700
+            font-size: 18px
+            margin-bottom: 15px
+            text-transform: capitalize
+            color: var(--text-black-900)
+
+          .timeline-text
+            line-height: 25px
+            font-size: 16px
+            text-align: justify
+            color: var(--text-black-700)
