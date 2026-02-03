@@ -303,52 +303,86 @@
                 <div class="container">
                     <div class="row">
                         <div class="section-title padd-15">
-                            <h2 data-i18n="portfolio.title">Projects</h2>
+                            <h2 data-i18n="portfolio.title">作品集</h2>
                         </div>
                     </div>
                     <div class="row portfolio-grid">
-                        <div class="portfolio-item padd-15" id="project-weather">
+                        <div class="portfolio-item padd-15" id="project-kanbanflow">
                             <div class="portfolio-item-inner shadow-dark">
                                 <div class="portfolio-img">
-                                    <a href="./Weather forecast/WeatherCard.html" target="_blank"><img
-                                            src="./image/Weather.jpg" alt="Weather card preview"
-                                            data-i18n="portfolio.items.weather.alt" data-i18n-attr="alt"></a>
+                                    <a href="https://chuuin.github.io/Vue/" target="_blank"><img
+                                            src="./image/KanbanFlow.png" alt="Kanban Flow 專案預覽"
+                                            data-i18n="portfolio.items.kanbanflow.alt" data-i18n-attr="alt"></a>
                                 </div>
                                 <div class="portfolio-content">
-                                    <h3 class="portfolio-title" data-i18n="portfolio.items.weather.title">Weather Card
+                                    <h3 class="portfolio-title" data-i18n="portfolio.items.kanbanflow.title">Kanban Flow
                                     </h3>
-                                    <p class="portfolio-summary" data-i18n="portfolio.items.weather.summary">Real-time
-                                        weather card with API data and dynamic UI updates.</p>
+                                    <p class="portfolio-summary" data-i18n="portfolio.items.kanbanflow.summary">
+                                        以 Vue 打造的看板式任務管理，呈現流程與工作狀態。</p>
                                     <div class="portfolio-meta">
-                                        <p><span class="meta-label" data-i18n="portfolio.roleLabel">Role</span><span
-                                                data-i18n="portfolio.items.weather.role">Front-end development</span>
+                                        <p><span class="meta-label" data-i18n="portfolio.roleLabel">角色</span><span
+                                                data-i18n="portfolio.items.kanbanflow.role">前端開發</span>
                                         </p>
-                                        <p><span class="meta-label" data-i18n="portfolio.stackLabel">Tech
-                                                Stack</span><span data-i18n="portfolio.items.weather.stack">HTML, CSS,
-                                                JavaScript, Weather
-                                                API</span></p>
+                                        <p><span class="meta-label" data-i18n="portfolio.stackLabel">技術棧</span><span
+                                                data-i18n="portfolio.items.kanbanflow.stack">Vue、JavaScript、HTML、CSS</span>
+                                        </p>
                                     </div>
-                                    <h4 class="portfolio-subtitle" data-i18n="portfolio.highlightsLabel">Highlights</h4>
+                                    <h4 class="portfolio-subtitle" data-i18n="portfolio.highlightsLabel">亮點</h4>
                                     <ul class="portfolio-highlights">
-                                        <li data-i18n="portfolio.items.weather.highlights.0">Async fetch with loading
-                                            and
-                                            error states</li>
-                                        <li data-i18n="portfolio.items.weather.highlights.1">Dynamic rendering based on
-                                            API response</li>
-                                        <li data-i18n="portfolio.items.weather.highlights.2">Simple state management for
-                                            unit display</li>
-                                        <li data-i18n="portfolio.items.weather.highlights.3">Responsive card layout</li>
+                                        <li data-i18n="portfolio.items.kanbanflow.highlights.0">欄位式流程版面</li>
+                                        <li data-i18n="portfolio.items.kanbanflow.highlights.1">任務卡片視覺結構</li>
+                                        <li data-i18n="portfolio.items.kanbanflow.highlights.2">任務移動時的狀態更新</li>
+                                        <li data-i18n="portfolio.items.kanbanflow.highlights.3">響應式看板佈局</li>
                                     </ul>
                                     <div class="portfolio-links">
-                                        <a class="btn btn-outline" href="./Weather forecast/WeatherCard.html"
-                                            target="_blank" data-i18n="portfolio.liveDemo">Live Demo</a>
+                                        <a class="btn btn-outline" href="https://chuuin.github.io/Vue/" target="_blank"
+                                            data-i18n="portfolio.liveDemo">線上 Demo</a>
                                         <a class="btn btn-ghost" href="#" data-i18n="portfolio.githubRepo">GitHub
                                             Repo</a>
                                     </div>
                                     <p class="portfolio-result"><span class="meta-label"
-                                            data-i18n="portfolio.resultLabel">Outcome</span><span
-                                            data-i18n="portfolio.items.weather.result">Stable rendering with graceful
-                                            fallback when API errors occur.</span></p>
+                                            data-i18n="portfolio.resultLabel">成果</span><span
+                                            data-i18n="portfolio.items.kanbanflow.result">清楚呈現任務在各階段的進度。</span></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="portfolio-item padd-15" id="project-weather">
+                            <div class="portfolio-item-inner shadow-dark">
+                                <div class="portfolio-img">
+                                    <a href="./Weather forecast/WeatherCard.html" target="_blank"><img
+                                            src="./image/Weather.jpg" alt="天氣卡片專案預覽"
+                                            data-i18n="portfolio.items.weather.alt" data-i18n-attr="alt"></a>
+                                </div>
+                                <div class="portfolio-content">
+                                    <h3 class="portfolio-title" data-i18n="portfolio.items.weather.title">天氣卡片
+                                    </h3>
+                                    <p class="portfolio-summary" data-i18n="portfolio.items.weather.summary">
+                                        串接天氣 API 的即時卡片，具動態狀態與資料更新。</p>
+                                    <div class="portfolio-meta">
+                                        <p><span class="meta-label" data-i18n="portfolio.roleLabel">角色</span><span
+                                                data-i18n="portfolio.items.weather.role">前端開發</span>
+                                        </p>
+                                        <p><span class="meta-label" data-i18n="portfolio.stackLabel">技術棧</span><span
+                                                data-i18n="portfolio.items.weather.stack">HTML、CSS、JavaScript、Weather
+                                                API</span></p>
+                                    </div>
+                                    <h4 class="portfolio-subtitle" data-i18n="portfolio.highlightsLabel">亮點</h4>
+                                    <ul class="portfolio-highlights">
+                                        <li data-i18n="portfolio.items.weather.highlights.0">非同步抓取與 loading/error
+                                            狀態</li>
+                                        <li data-i18n="portfolio.items.weather.highlights.1">依 API 回應動態渲染</li>
+                                        <li data-i18n="portfolio.items.weather.highlights.2">單位切換的簡易狀態管理</li>
+                                        <li data-i18n="portfolio.items.weather.highlights.3">響應式卡片版面</li>
+                                    </ul>
+                                    <div class="portfolio-links">
+                                        <a class="btn btn-outline" href="./Weather forecast/WeatherCard.html"
+                                            target="_blank" data-i18n="portfolio.liveDemo">線上 Demo</a>
+                                        <a class="btn btn-ghost" href="#" data-i18n="portfolio.githubRepo">GitHub
+                                            Repo</a>
+                                    </div>
+                                    <p class="portfolio-result"><span class="meta-label"
+                                            data-i18n="portfolio.resultLabel">成果</span><span
+                                            data-i18n="portfolio.items.weather.result">API 失敗時仍可保持穩定呈現。</span></p>
                                 </div>
                             </div>
                         </div>
@@ -356,47 +390,38 @@
                             <div class="portfolio-item-inner shadow-dark">
                                 <div class="portfolio-img">
                                     <a href="./Microsoft%E7%B6%B2%E9%A0%81%E8%A3%BD%E4%BD%9C/Microsoft.html"
-                                        target="_blank"><img src="./image/Microsoft.png"
-                                            alt="Microsoft homepage clone preview"
+                                        target="_blank"><img src="./image/Microsoft.png" alt="Microsoft 首頁專案預覽"
                                             data-i18n="portfolio.items.microsoft.alt" data-i18n-attr="alt"></a>
                                 </div>
                                 <div class="portfolio-content">
                                     <h3 class="portfolio-title" data-i18n="portfolio.items.microsoft.title">Microsoft
-                                        Homepage Clone</h3>
-                                    <p class="portfolio-summary" data-i18n="portfolio.items.microsoft.summary">Homepage
-                                        recreation focused on layout fidelity and UI structure.</p>
+                                        首頁切版</h3>
+                                    <p class="portfolio-summary" data-i18n="portfolio.items.microsoft.summary">
+                                        微軟首頁切版練習，聚焦版面結構與一致性。</p>
                                     <div class="portfolio-meta">
-                                        <p><span class="meta-label" data-i18n="portfolio.roleLabel">Role</span><span
-                                                data-i18n="portfolio.items.microsoft.role">HTML/CSS
-                                                implementation</span>
+                                        <p><span class="meta-label" data-i18n="portfolio.roleLabel">角色</span><span
+                                                data-i18n="portfolio.items.microsoft.role">HTML/CSS 切版</span>
                                         </p>
-                                        <p><span class="meta-label" data-i18n="portfolio.stackLabel">Tech
-                                                Stack</span><span data-i18n="portfolio.items.microsoft.stack">HTML,
-                                                CSS</span></p>
+                                        <p><span class="meta-label" data-i18n="portfolio.stackLabel">技術棧</span><span
+                                                data-i18n="portfolio.items.microsoft.stack">HTML、CSS</span></p>
                                     </div>
-                                    <h4 class="portfolio-subtitle" data-i18n="portfolio.highlightsLabel">Highlights</h4>
+                                    <h4 class="portfolio-subtitle" data-i18n="portfolio.highlightsLabel">亮點</h4>
                                     <ul class="portfolio-highlights">
-                                        <li data-i18n="portfolio.items.microsoft.highlights.0">Flex and grid layout for
-                                            complex sections</li>
-                                        <li data-i18n="portfolio.items.microsoft.highlights.1">Reusable section
-                                            structure for maintainability</li>
-                                        <li data-i18n="portfolio.items.microsoft.highlights.2">Responsive breakpoints
-                                            for
-                                            desktop and tablet</li>
-                                        <li data-i18n="portfolio.items.microsoft.highlights.3">Hover/focus states for
-                                            interactive elements</li>
+                                        <li data-i18n="portfolio.items.microsoft.highlights.0">Flex/Grid 排版處理複雜區塊</li>
+                                        <li data-i18n="portfolio.items.microsoft.highlights.1">模組化區塊結構提升維護性</li>
+                                        <li data-i18n="portfolio.items.microsoft.highlights.2">桌機與平板斷點調整</li>
+                                        <li data-i18n="portfolio.items.microsoft.highlights.3">互動元素 hover/focus 狀態</li>
                                     </ul>
                                     <div class="portfolio-links">
                                         <a class="btn btn-outline"
                                             href="./Microsoft%E7%B6%B2%E9%A0%81%E8%A3%BD%E4%BD%9C/Microsoft.html"
-                                            target="_blank" data-i18n="portfolio.liveDemo">Live Demo</a>
+                                            target="_blank" data-i18n="portfolio.liveDemo">線上 Demo</a>
                                         <a class="btn btn-ghost" href="#" data-i18n="portfolio.githubRepo">GitHub
                                             Repo</a>
                                     </div>
                                     <p class="portfolio-result"><span class="meta-label"
-                                            data-i18n="portfolio.resultLabel">Outcome</span><span
-                                            data-i18n="portfolio.items.microsoft.result">Consistent layout across
-                                            breakpoints with clean structure.</span></p>
+                                            data-i18n="portfolio.resultLabel">成果</span><span
+                                            data-i18n="portfolio.items.microsoft.result">跨尺寸保持一致版面與視覺規範。</span></p>
                                 </div>
                             </div>
                         </div>
@@ -404,44 +429,37 @@
                             <div class="portfolio-item-inner shadow-dark">
                                 <div class="portfolio-img">
                                     <a href="./colorgame/colorgame.html" target="_blank"><img
-                                            src="./image/colorgame.jpg" alt="Color vision game preview"
+                                            src="./image/colorgame.jpg" alt="色彩辨識遊戲預覽"
                                             data-i18n="portfolio.items.colorgame.alt" data-i18n-attr="alt"></a>
                                 </div>
                                 <div class="portfolio-content">
-                                    <h3 class="portfolio-title" data-i18n="portfolio.items.colorgame.title">Color Vision
-                                        Game</h3>
-                                    <p class="portfolio-summary" data-i18n="portfolio.items.colorgame.summary">A simple
-                                        game to practice JS state and accessibility-friendly UI.</p>
+                                    <h3 class="portfolio-title" data-i18n="portfolio.items.colorgame.title">色彩辨識遊戲</h3>
+                                    <p class="portfolio-summary" data-i18n="portfolio.items.colorgame.summary">
+                                        以顏色辨識為主題的互動小遊戲，練習 JS 狀態與可及性。</p>
                                     <div class="portfolio-meta">
-                                        <p><span class="meta-label" data-i18n="portfolio.roleLabel">Role</span><span
-                                                data-i18n="portfolio.items.colorgame.role">Front-end development</span>
+                                        <p><span class="meta-label" data-i18n="portfolio.roleLabel">角色</span><span
+                                                data-i18n="portfolio.items.colorgame.role">前端開發</span>
                                         </p>
-                                        <p><span class="meta-label" data-i18n="portfolio.stackLabel">Tech
-                                                Stack</span><span data-i18n="portfolio.items.colorgame.stack">HTML, CSS,
-                                                JavaScript</span>
+                                        <p><span class="meta-label" data-i18n="portfolio.stackLabel">技術棧</span><span
+                                                data-i18n="portfolio.items.colorgame.stack">HTML、CSS、JavaScript</span>
                                         </p>
                                     </div>
-                                    <h4 class="portfolio-subtitle" data-i18n="portfolio.highlightsLabel">Highlights</h4>
+                                    <h4 class="portfolio-subtitle" data-i18n="portfolio.highlightsLabel">亮點</h4>
                                     <ul class="portfolio-highlights">
-                                        <li data-i18n="portfolio.items.colorgame.highlights.0">Randomized color
-                                            generation logic</li>
-                                        <li data-i18n="portfolio.items.colorgame.highlights.1">State-driven win/lose
-                                            feedback</li>
-                                        <li data-i18n="portfolio.items.colorgame.highlights.2">High-contrast palette for
-                                            accessibility</li>
-                                        <li data-i18n="portfolio.items.colorgame.highlights.3">Clean DOM event handling
-                                        </li>
+                                        <li data-i18n="portfolio.items.colorgame.highlights.0">隨機顏色生成邏輯</li>
+                                        <li data-i18n="portfolio.items.colorgame.highlights.1">狀態驅動的勝負回饋</li>
+                                        <li data-i18n="portfolio.items.colorgame.highlights.2">高對比色盤提升可讀性</li>
+                                        <li data-i18n="portfolio.items.colorgame.highlights.3">清楚的 DOM 事件處理</li>
                                     </ul>
                                     <div class="portfolio-links">
                                         <a class="btn btn-outline" href="./colorgame/colorgame.html" target="_blank"
-                                            data-i18n="portfolio.liveDemo">Live Demo</a>
+                                            data-i18n="portfolio.liveDemo">線上 Demo</a>
                                         <a class="btn btn-ghost" href="#" data-i18n="portfolio.githubRepo">GitHub
                                             Repo</a>
                                     </div>
                                     <p class="portfolio-result"><span class="meta-label"
-                                            data-i18n="portfolio.resultLabel">Outcome</span><span
-                                            data-i18n="portfolio.items.colorgame.result">Playable game with clear,
-                                            accessible feedback.</span></p>
+                                            data-i18n="portfolio.resultLabel">成果</span><span
+                                            data-i18n="portfolio.items.colorgame.result">遊戲流程完整且操作回饋明確。</span></p>
                                 </div>
                             </div>
                         </div>
@@ -449,42 +467,36 @@
                             <div class="portfolio-item-inner shadow-dark">
                                 <div class="portfolio-img">
                                     <a href="./homework-BMI/BMI-HW.html" target="_blank"><img src="./image/BMI.jpg"
-                                            alt="BMI calculator preview" data-i18n="portfolio.items.bmi.alt"
+                                            alt="BMI 計算器預覽" data-i18n="portfolio.items.bmi.alt"
                                             data-i18n-attr="alt"></a>
                                 </div>
                                 <div class="portfolio-content">
-                                    <h3 class="portfolio-title" data-i18n="portfolio.items.bmi.title">BMI Calculator
+                                    <h3 class="portfolio-title" data-i18n="portfolio.items.bmi.title">BMI 計算器
                                     </h3>
-                                    <p class="portfolio-summary" data-i18n="portfolio.items.bmi.summary">Responsive BMI
-                                        calculator with validation and instant feedback.</p>
+                                    <p class="portfolio-summary" data-i18n="portfolio.items.bmi.summary">
+                                        具輸入驗證與即時回饋的 BMI 計算器。</p>
                                     <div class="portfolio-meta">
-                                        <p><span class="meta-label" data-i18n="portfolio.roleLabel">Role</span><span
-                                                data-i18n="portfolio.items.bmi.role">Front-end development</span></p>
-                                        <p><span class="meta-label" data-i18n="portfolio.stackLabel">Tech
-                                                Stack</span><span data-i18n="portfolio.items.bmi.stack">HTML, CSS,
-                                                JavaScript</span></p>
+                                        <p><span class="meta-label" data-i18n="portfolio.roleLabel">角色</span><span
+                                                data-i18n="portfolio.items.bmi.role">前端開發</span></p>
+                                        <p><span class="meta-label" data-i18n="portfolio.stackLabel">技術棧</span><span
+                                                data-i18n="portfolio.items.bmi.stack">HTML、CSS、JavaScript</span></p>
                                     </div>
-                                    <h4 class="portfolio-subtitle" data-i18n="portfolio.highlightsLabel">Highlights</h4>
+                                    <h4 class="portfolio-subtitle" data-i18n="portfolio.highlightsLabel">亮點</h4>
                                     <ul class="portfolio-highlights">
-                                        <li data-i18n="portfolio.items.bmi.highlights.0">Input validation and empty
-                                            state handling</li>
-                                        <li data-i18n="portfolio.items.bmi.highlights.1">Instant calculation with user
-                                            messaging</li>
-                                        <li data-i18n="portfolio.items.bmi.highlights.2">Responsive layout for mobile
-                                            and
-                                            desktop</li>
-                                        <li data-i18n="portfolio.items.bmi.highlights.3">Clear result formatting</li>
+                                        <li data-i18n="portfolio.items.bmi.highlights.0">輸入驗證與空狀態處理</li>
+                                        <li data-i18n="portfolio.items.bmi.highlights.1">即時計算與結果訊息</li>
+                                        <li data-i18n="portfolio.items.bmi.highlights.2">手機/桌機版面響應式</li>
+                                        <li data-i18n="portfolio.items.bmi.highlights.3">清楚的數值與等級呈現</li>
                                     </ul>
                                     <div class="portfolio-links">
                                         <a class="btn btn-outline" href="./homework-BMI/BMI-HW.html" target="_blank"
-                                            data-i18n="portfolio.liveDemo">Live Demo</a>
+                                            data-i18n="portfolio.liveDemo">線上 Demo</a>
                                         <a class="btn btn-ghost" href="#" data-i18n="portfolio.githubRepo">GitHub
                                             Repo</a>
                                     </div>
                                     <p class="portfolio-result"><span class="meta-label"
-                                            data-i18n="portfolio.resultLabel">Outcome</span><span
-                                            data-i18n="portfolio.items.bmi.result">Prevents invalid inputs and works
-                                            smoothly across devices.</span></p>
+                                            data-i18n="portfolio.resultLabel">成果</span><span
+                                            data-i18n="portfolio.items.bmi.result">避免錯誤輸入並保持操作流暢。</span></p>
                                 </div>
                             </div>
                         </div>

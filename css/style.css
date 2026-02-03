@@ -919,19 +919,80 @@ p {
   margin-bottom: 30px;
 }
 .container .portfolio-item .portfolio-item-inner {
-  border: 6px solid var(--skin-color);
-  border-radius: 10px;
+  border: 1px solid var(--border-soft);
+  border-radius: 18px;
   overflow: hidden;
   background: var(--surface-800);
   display: flex;
   flex-direction: column;
+  position: relative;
+  box-shadow: 0 18px 36px var(--glow-soft);
+  transition: transform 0.35s ease, box-shadow 0.35s ease,
+    border-color 0.35s ease;
+}
+.container .portfolio-item .portfolio-item-inner::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  height: 4px;
+  background: linear-gradient(
+    90deg,
+    var(--skin-color),
+    rgba(255, 255, 255, 0)
+  );
+  opacity: 0.9;
+}
+.container .portfolio-item .portfolio-item-inner:hover {
+  transform: translateY(-6px);
+  border-color: var(--border-strong);
+  box-shadow: 0 28px 55px rgba(0, 0, 0, 0.25);
+}
+.container .portfolio-item .portfolio-img {
+  position: relative;
+  padding: 12px;
+  background: radial-gradient(
+      120% 120% at 10% 10%,
+      rgba(255, 255, 255, 0.08),
+      rgba(0, 0, 0, 0)
+    ),
+    var(--surface-700);
+}
+.container .portfolio-item .portfolio-img::after {
+  content: "";
+  position: absolute;
+  inset: 12px;
+  border-radius: 12px;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0) 40%,
+    rgba(0, 0, 0, 0.35) 100%
+  );
+  opacity: 0;
+  transition: opacity 0.35s ease;
+  pointer-events: none;
+}
+.container .portfolio-item .portfolio-item-inner:hover .portfolio-img::after {
+  opacity: 1;
+}
+.container .portfolio-item .portfolio-img a {
+  display: block;
 }
 .container .portfolio-item .portfolio-item-inner img {
   width: 100%;
-  aspect-ratio: 4 / 3;
+  aspect-ratio: 16 / 9;
   height: auto;
-  object-fit: cover;
+  object-fit: contain;
+  background: var(--surface-700);
+  border-radius: 12px;
+  box-shadow: 0 12px 26px rgba(0, 0, 0, 0.18);
+  transition: transform 0.35s ease, filter 0.35s ease;
   display: block;
+}
+.container .portfolio-item .portfolio-item-inner:hover img {
+  transform: scale(1.03);
+  filter: saturate(1.08) contrast(1.03);
 }
 .container .portfolio-item .portfolio-item-inner a:not(.btn) {
   color: var(--skin-color);
