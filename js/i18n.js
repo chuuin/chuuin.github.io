@@ -1,6 +1,10 @@
 ﻿(() => {
   'use strict';
+
+  // 多語系字典：key 為語系代碼，value 為對應的文案
+  // 由 js/script.js 讀取並套用到畫面
   window.TRANSLATIONS = {
+    // 繁體中文
     "zh-Hant": {
       "site.title": "IAN｜前端工程師",
       "site.logo": "IAN",
@@ -188,6 +192,7 @@
       "ui.languageJa": "日本語",
       "ui.backToTop": "回到頂部"
     },
+    // English
     "en": {
       "site.title": "Ian | Front-End Engineer",
       "site.logo": "IAN",
@@ -375,6 +380,7 @@
       "ui.languageJa": "Japanese",
       "ui.backToTop": "Back to top"
     },
+    // 日本語
     "ja": {
       "site.title": "Ian | フロントエンドエンジニア",
       "site.logo": "IAN",
@@ -565,3 +571,6 @@
   };
 
 })();
+
+
+
